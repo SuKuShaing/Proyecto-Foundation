@@ -1,4 +1,6 @@
 ---
+import Navbar from "../components/Navbar.astro";
+
 // Server Only
 const name = 'Sebastián Sanhueza';
 const titlePage = 'Página principal';
@@ -12,11 +14,7 @@ const titlePage = 'Página principal';
 	<title>{titlePage}</title>
 </head>
 <body>
-	<nav>
-		<a href="/">Home</a>
-		<a href="/about">About Page</a>
-		<a href="contact">Contact Page</a>
-	</nav>
+	<Navbar />
 
 	<h1>Hi {name}</h1>
 
