@@ -1,21 +1,13 @@
 ---
 import Navbar from "../components/Navbar.astro";
+import MainLayout from "../layouts/MainLayout.astro";
 
 // Server Only
 const name = 'Sebastián Sanhueza';
 const titlePage = 'Página principal';
 ---
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{titlePage}</title>
-</head>
-<body>
-	<Navbar />
-
+<MainLayout titlePage={titlePage}>
 	<h1>Hi {name}</h1>
 
 
@@ -25,7 +17,8 @@ const titlePage = 'Página principal';
 	<footer>
 		2024
 	</footer>
-</body>
+</MainLayout>
+
 <script>
 	// Client Only
 	const currentYear: number = new Date().getFullYear();
@@ -39,4 +32,3 @@ const titlePage = 'Página principal';
 		momentoActual.innerHTML = new Date().toLocaleTimeString();
 	}, 1000);
 </script>
-</html>

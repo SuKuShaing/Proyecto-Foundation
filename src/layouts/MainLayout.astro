@@ -1,0 +1,23 @@
+---
+import Navbar from "../components/Navbar.astro";
+
+interface Props {
+	titlePage: string;
+	// age?: number; // el signo de interrogación indica que es una props opcional
+}
+
+const { titlePage } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{titlePage}</title>
+</head>
+<body>
+    <Navbar />
+    <slot />
+</body>
+</html>
