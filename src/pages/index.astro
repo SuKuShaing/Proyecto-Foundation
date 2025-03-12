@@ -12,7 +12,14 @@ const titlePage = 'Página principal';
 	<title>{titlePage}</title>
 </head>
 <body>
-	<h1>{name}</h1>
+	<nav>
+		<a href="/">Home</a>
+		<a href="/about">About Page</a>
+		<a href="contact">Contact Page</a>
+	</nav>
+
+	<h1>Hi {name}</h1>
+
 
 	<p>Momento actual: {new Date().toLocaleTimeString()}</p> <!-- Esto quedará estático -->
 	<p>Momento actual real: <span id="momentoActual"></span></p>
