@@ -14,19 +14,13 @@ const titlePage = 'Página principal';
 	<p>Momento actual: {new Date().toLocaleTimeString()}</p> <!-- Esto quedará estático -->
 	<p>Momento actual real: <span id="momentoActual"></span></p>
 
-	<footer>
-		2024
-	</footer>
 </MainLayout>
 
 <script>
 	// Client Only
 	const currentYear: number = new Date().getFullYear();
 	
-	const footer = document.querySelector('footer') as HTMLElement;
 	const momentoActual = document.querySelector('#momentoActual') as HTMLElement;
-
-	footer.innerHTML = `Año: ${currentYear}`;
 
 	setInterval(() => {
 		momentoActual.innerHTML = new Date().toLocaleTimeString();

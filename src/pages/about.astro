@@ -1,8 +1,17 @@
 ---
+import CustomTitle from "../components/CustomTitle.astro";
 import Navbar from "../components/Navbar.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <MainLayout titlePage={'Acerca de'}>
     <h1>Sobre Sebastian Sanhueza</h1>
+
+    <CustomTitle title={'Soy un desarrollador web'} />
 </MainLayout>
+
+<style>
+    h1 {
+        color: red;
+    }
+</style>
