@@ -3,6 +3,9 @@ import { ClientRouter } from "astro:transitions";
 import Navbar from "../components/Navbar.astro";
 
 import '../styles/global.css';
+// cuando está en la carpeta public, no es necesario poner la ruta completa
+// en este caso no se encuentra en public para que sea procesado y minificado por Astro
+// lo que está en la carpeta public no es procesado por Astro
 
 interface Props {
 	titlePage: string;
@@ -19,10 +22,15 @@ const { titlePage } = Astro.props;
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{titlePage}</title>
 
+	<!-- en caso de que los estilos esten en la carpeta public -->
+	<!-- <link rel="stylesheet" href="/styles/global.css"> -->
+
 	<ClientRouter />
 </head>
 <body>
     <Navbar />
-    <slot />
+	<main>
+		<slot />
+	</main>
 </body>
 </html>
